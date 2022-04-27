@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
       this.categories = res
       console.log(res)
     })
-    // this.categories = this.categoryService.getCategories()
   }
 
   categoryButtonClick(category: string) {

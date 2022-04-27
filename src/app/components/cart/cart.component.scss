@@ -29,6 +29,26 @@
 }
 
 .total-price-div {
-    margin-left: auto;
+    margin-left: 80vw;
     margin-right: 5rem;
+
+    .checkout-button {
+        border: 0;
+        border-radius: 16px;
+        color: black;
+        background-color: darkgreen;
+        font-size: 18px;
+        padding: 1rem 1.5rem;
+    }
+}
+
+.clear-cart {
+    border: 0;
+    border-radius: 16px;
+    color: white;
+    background-color: darkred;
+    font-size: 18px;
+    padding: 1rem 1.5rem;
+    margin-left: 5rem;
+    margin-top: 3rem;
 }

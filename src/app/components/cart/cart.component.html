@@ -1,5 +1,5 @@
 <div>
-    <div *ngIf="cartEmpty">
+    <div style="text-align: center;" *ngIf="cartEmpty">
         <h3>There is no products yet</h3>
     </div>
     <div *ngIf="!cartEmpty">
@@ -12,19 +12,25 @@
                     </div>
                     <div class="price-div" style="margin-left: auto;">
                         <div>
-                            <h3>{{product.price}}$</h3>
+                            <h3 style="margin-top: 1rem;">{{product.price}}$</h3>
                         </div>
                     </div>
-                    <div>
-                        <button class="delete-button">Delete</button>
-
-                    </div>
+                    <!-- <div>
+                        <button class="delete-button" (click)="deleteProduct(product)">Delete</button>
+                    </div> -->
                 </div>
             </li>
         </ul>
 
+        <div>
+            <button class="clear-cart" (click)="clearCart()">Clear Cart</button>
+        </div>
+
         <div class="total-price-div">
-            <h3>Total price: {{totalPrice}}</h3>
+            <input type="text" placeholder="name" [(ngModel)]="name">
+            <input type="text" placeholder="number" [(ngModel)]="phoneNumber">
+            <h3>Total price: {{totalPrice}}$</h3>
+            <button class="checkout-button" (click)="checkoutButtonClick()">Checkout</button>
         </div>
     </div>
 

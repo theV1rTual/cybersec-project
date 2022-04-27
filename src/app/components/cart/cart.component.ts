@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { CartService } from './../../services/cart/cart.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -12,7 +13,10 @@ export class CartComponent implements OnInit {
   cartEmpty:boolean = true
   totalPrice: number = 0
 
-  constructor(private cartService: CartService) { }
+  name: string = ''
+  phoneNumber: string = ''
+
+  constructor(private cartService: CartService, private router: Router) { }
 
   ngOnInit(): void {
     this.getCartProducts()
@@ -32,4 +36,14 @@ export class CartComponent implements OnInit {
     }
   }
 
+  clearCart() {
+
+    this.cartEmpty = true
+
+  }
+
+  checkoutButtonClick() {
+    alert('Thanks for your order, we will contact with you shortly')
+    this.router.navigate([''])
+  }
 }

@@ -33,11 +33,11 @@ export class CatalogComponent implements OnInit {
       console.log(res)
       this.products = res
     })
-    // this.productsService.getProducts()
   }
 
   addToCart(product: any) {
     this.cartService.cartProducts.push(product)
+    alert("Product added")
   }
   
 }
